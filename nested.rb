@@ -59,10 +59,33 @@ def dennis_ritchies_language
           :languages => ["C"]
         }
      }
-		 return[:dennis_ritchie][:languages][0]
+		 return[:dennis_ritchie][:languages]["C"]
 end
 
 def adding_matz
+	programmer_hash =
+	{
+		 :grace_hopper => {
+			 :known_for => "COBOL",
+			 :languages => ["COBOL", "FORTRAN"]
+		 },
+		 :alan_kay => {
+			 :known_for => "Object Orientation",
+			 :languages => ["Smalltalk", "LISP"]
+		 },
+		 :dennis_ritchie => {
+			 :known_for => "Unix",
+			 :languages => ["C"]
+		 }
+	}
+
+programmer_hash[:yukihiro_matsumoto][:known_for] = "Ruby"
+programmer_hash[:yukihiro_matsumoto][:languages] = ["LISP","C"]
+
+
+end
+
+
 # add the following information to the top level of programmer_hash
 # :yukihiro_matsumoto => {
 #   :known_for => "Ruby",
